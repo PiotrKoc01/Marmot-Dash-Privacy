@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Polityka Prywatności - Marmot Dash</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f5f5f5;
+            max-width: 100%;
+            overflow-x: hidden;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+            margin-bottom: 2rem;
+            border-radius: 0 0 20px 20px;
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+        
+        .language-switcher {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        
+        .lang-btn {
+            background: #667eea;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            margin: 0 5px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+        
+        .lang-btn:hover {
+            background: #764ba2;
+            transform: translateY(-2px);
+        }
+        
+        .lang-btn.active {
+            background: #764ba2;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        
+        .policy-content {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            margin-bottom: 2rem;
+        }
+        
+        h2 {
+            color: #667eea;
+            margin: 1.5rem 0 1rem 0;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid #f0f0f0;
+        }
+        
+        h2:first-child {
+            margin-top: 0;
+        }
+        
+        ul {
+            margin-left: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        li {
+            margin-bottom: 0.5rem;
+        }
+        
+        .contact-info {
+            background: #f8f9fa;
+            padding: 1.5rem;
+            border-radius: 10px;
+            margin-top: 2rem;
+            border-left: 4px solid #667eea;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 2rem 0;
+            color: #666;
+            font-size: 0.9rem;
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                padding: 10px;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+            
+            .policy-content {
+                padding: 1.5rem;
+            }
+            
+            .lang-btn {
+                padding: 8px 16px;
+                font-size: 0.9rem;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.7rem;
+            }
+            
+            .policy-content {
+                padding: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Marmot Dash</h1>
+            <p class="subtitle">Polityka Prywatności</p>
+        </div>
+    </header>
+    
+    <div class="container">
+        <div class="language-switcher">
+            <button class="lang-btn active" onclick="showPolish()">Polski</button>
+            <button class="lang-btn" onclick="showEnglish()">English</button>
+        </div>
+        
+        <div id="polish-version" class="policy-content">
+            <h2>Polityka Prywatności Marmot Dash</h2>
+            <p><strong>Data wejścia w życie:</strong> 03.01.2026</p>
+            
+            <h2>1. Administrator danych</h2>
+            <p>Piotr Koczur<br>
+            marmotdash@gmail.com</p>
+            
+            <h2>2. Jakie dane zbieramy</h2>
+            <ul>
+                <li><strong>Dane głosowe</strong> - wyłącznie w czasie rzeczywistym dla funkcji mowy</li>
+                <li><strong>Informacje o preferencjach</strong> - wiek, tematy nauki</li>
+                <li><strong>Dane techniczne</strong> - informacje o urządzeniu, logi błędów</li>
+            </ul>
+            
+            <h2>3. Cel przetwarzania</h2>
+            <ul>
+                <li>Umożliwienie funkcji Text-to-Speech i Speech-to-Text</li>
+                <li>Personalizacja doświadczenia użytkownika</li>
+                <li>Poprawa działania aplikacji</li>
+            </ul>
+            
+            <h2>4. Podstawa prawna</h2>
+            <ul>
+                <li>Zgoda użytkownika (art. 6 ust. 1 lit. a RODO)</li>
+                <li>Wykonanie umowy (art. 6 ust. 1 lit. b RODO)</li>
+            </ul>
+            
+            <h2>5. Przechowywanie i bezpieczeństwo</h2>
+            <ul>
+                <li>Dane przechowywane lokalnie na urządzeniu</li>
+                <li>Brak przechowywania na naszych serwerach</li>
+                <li>Dane głosowe nie są zapisywane po zakończeniu sesji</li>
+            </ul>
+            
+            <h2>6. Usługi zewnętrzne</h2>
+            <p>Korzystamy z Google Cloud APIs do przetwarzania mowy.<br>
+            Dane audio są przekazywane tym usługom zgodnie z ich politykami.</p>
+            
+            <h2>7. Prawa użytkowników</h2>
+            <p>Masz prawo do dostępu, poprawy, usunięcia swoich danych.<br>
+            Aby usunąć wszystkie dane, usuń dane aplikacji w ustawieniach urządzenia.</p>
+            
+            <div class="contact-info">
+                <h2>8. Kontakt</h2>
+                <p>W sprawach prywatności: <a href="mailto:marmotdash@gmail.com">marmotdash@gmail.com</a></p>
+            </div>
+        </div>
+        
+        <div id="english-version" class="policy-content" style="display: none;">
+            <h2>Marmot Dash Privacy Policy</h2>
+            <p><strong>Effective Date:</strong> January 3, 2026</p>
+            
+            <h2>1. Data Controller</h2>
+            <p>Piotr Koczur<br>
+            marmotdash@gmail.com</p>
+            
+            <h2>2. Data We Collect</h2>
+            <ul>
+                <li><strong>Voice data</strong> - only in real-time for speech functions</li>
+                <li><strong>Preference information</strong> - age, learning topics</li>
+                <li><strong>Technical data</strong> - device information, error logs</li>
+            </ul>
+            
+            <h2>3. Purpose of Processing</h2>
+            <ul>
+                <li>Enabling Text-to-Speech and Speech-to-Text functions</li>
+                <li>Personalizing user experience</li>
+                <li>Improving app performance</li>
+            </ul>
+            
+            <h2>4. Legal Basis</h2>
+            <ul>
+                <li>User consent (Article 6(1)(a) GDPR)</li>
+                <li>Performance of contract (Article 6(1)(b) GDPR)</li>
+            </ul>
+            
+            <h2>5. Storage and Security</h2>
+            <ul>
+                <li>Data stored locally on device</li>
+                <li>No storage on our servers</li>
+                <li>Voice data is not saved after session ends</li>
+            </ul>
+            
+            <h2>6. External Services</h2>
+            <p>We use Google Cloud APIs for speech processing.<br>
+            Audio data is transferred to these services according to their policies.</p>
+            
+            <h2>7. User Rights</h2>
+            <p>You have the right to access, correct, and delete your data.<br>
+            To delete all data, remove app data in your device settings.</p>
+            
+            <div class="contact-info">
+                <h2>8. Contact</h2>
+                <p>For privacy matters: <a href="mailto:marmotdash@gmail.com">marmotdash@gmail.com</a></p>
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+        <div class="container">
+            <p>© 2026 Marmot Dash. Wszystkie prawa zastrzeżone.</p>
+            <p>© 2026 Marmot Dash. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        function showPolish() {
+            document.getElementById('polish-version').style.display = 'block';
+            document.getElementById('english-version').style.display = 'none';
+            document.querySelectorAll('.lang-btn')[0].classList.add('active');
+            document.querySelectorAll('.lang-btn')[1].classList.remove('active');
+        }
+        
+        function showEnglish() {
+            document.getElementById('polish-version').style.display = 'none';
+            document.getElementById('english-version').style.display = 'block';
+            document.querySelectorAll('.lang-btn')[0].classList.remove('active');
+            document.querySelectorAll('.lang-btn')[1].classList.add('active');
+        }
+        
+        // Set initial language based on browser preference
+        if (navigator.language.startsWith('pl')) {
+            showPolish();
+        } else {
+            showEnglish();
+        }
+    </script>
+</body>
+</html>
