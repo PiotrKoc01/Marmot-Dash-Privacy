@@ -108,6 +108,14 @@
             border-radius: 4px;
         }
         
+        .warning {
+            background-color: #ffe6e6;
+            padding: 1rem;
+            border-left: 4px solid #ff3333;
+            margin: 1rem 0;
+            border-radius: 4px;
+        }
+        
         .contact-info {
             background: #f8f9fa;
             padding: 1.5rem;
@@ -172,7 +180,18 @@
             <p><strong>Data wejścia w życie:</strong> 03.01.2026</p>
             
             <div class="highlight">
-                <strong>Ważna informacja:</strong> Aplikacja Marmot Dash używa mikrofonu WYŁĄCZNIE do analizy częstotliwości dźwięku w czasie rzeczywistym w celu rozpoznawania nut. <strong>NIE NAGRAMY</strong> i <strong>NIE ZAPISUJEMY</strong> żadnych nagrań dźwiękowych.
+                <strong>Ważna informacja:</strong> Aplikacja Marmot Dash oferuje dwie funkcje wykorzystujące mikrofon:
+                <ul>
+                    <li><strong>Analiza częstotliwości dźwięku</strong> - WYŁĄCZNIE do rozpoznawania nut w czasie rzeczywistym bez zapisywania nagrań</li>
+                    <li><strong>Speech-to-text (rozpoznawanie mowy) - OPCJONALNE</strong> - funkcja do konwersji mowy na tekst (tylko jeśli wyraźnie włączona przez użytkownika)</li>
+                </ul>
+            </div>
+            
+            <div class="warning">
+                <strong>Uwaga dotycząca Speech-to-Text:</strong>
+                <p>Funkcja konwersji mowy na tekst jest <strong>opcjonalna</strong> i wymaga Twojej aktywnej zgody. 
+                Podczas korzystania z tej funkcji, Twoja mowa może być przetwarzana przez zewnętrzne usługi. 
+                Możesz w każdej chwili wyłączyć tę funkcję w ustawieniach aplikacji.</p>
             </div>
             
             <h2>1. Administrator danych</h2>
@@ -182,6 +201,8 @@
             <h2>2. Jakie dane zbieramy</h2>
             <ul>
                 <li><strong>Dane analizy częstotliwości dźwięku</strong> - przetwarzane w czasie rzeczywistym bez zapisywania</li>
+                <li><strong>Dane mowy (tylko jeśli STT włączone)</strong> - nagrania audio do konwersji na tekst</li>
+                <li><strong>Przetworzony tekst (tylko jeśli STT włączone)</strong> - wynik konwersji mowy na tekst</li>
                 <li><strong>Dane analityczne Firebase</strong> - anonimowe statystyki użycia aplikacji</li>
                 <li><strong>Informacje o preferencjach</strong> - ustawienia aplikacji</li>
                 <li><strong>Dane techniczne</strong> - informacje o urządzeniu, logi błędów</li>
@@ -189,14 +210,42 @@
             
             <h2>3. Użycie mikrofonu</h2>
             <ul>
-                <li>Mikrofon używany jest wyłącznie do analizy częstotliwości dźwięku</li>
-                <li>Przetwarzanie odbywa się w czasie rzeczywistym na urządzeniu użytkownika</li>
-                <li><strong>Żadne nagrania dźwiękowe nie są tworzone ani zapisywane</strong></li>
-                <li>Przetworzone dane (częstotliwości) nie zawierają treści głosowych</li>
-                <li>Dostęp do mikrofonu można w każdej chwili wyłączyć w ustawieniach aplikacji</li>
+                <li>Mikrofon może być używany w dwóch celach:</li>
+                <ul>
+                    <li><strong>Analiza częstotliwości dźwięku</strong> - do rozpoznawania nut muzycznych
+                        <ul>
+                            <li>Przetwarzanie odbywa się w czasie rzeczywistym na urządzeniu</li>
+                            <li><strong>Żadne nagrania dźwiękowe nie są tworzone ani zapisywane</strong></li>
+                            <li>Dostęp do mikrofonu można w każdej chwili wyłączyć w ustawieniach aplikacji</li>
+                        </ul>
+                    </li>
+                    <li><strong>Speech-to-text (rozpoznawanie mowy)</strong> - opcjonalna funkcja
+                        <ul>
+                            <li>Wymaga wyraźnej, osobnej zgody użytkownika przed aktywacją</li>
+                            <li>Nagrania mowy są przetwarzane w celu konwersji na tekst</li>
+                            <li>Funkcja domyślnie WYŁĄCZONA</li>
+                        </ul>
+                    </li>
+                </ul>
             </ul>
             
-            <h2>4. Firebase Analytics</h2>
+            <h2>4. Speech-to-Text (opcjonalna funkcja)</h2>
+            <ul>
+                <li>Funkcja dostępna tylko po wyraźnej, świadomej zgodzie użytkownika</li>
+                <li>Nagrania mowy są przetwarzane w celu konwersji na tekst pisany</li>
+                <li><strong>Przetwarzanie może odbywać się:</strong>
+                    <ul>
+                        <li>Lokalnie na urządzeniu (jeśli obsługiwane przez system)</li>
+                        <li>Poprzez zewnętrzne usługi rozpoznawania mowy (patrz punkt 8)</li>
+                    </ul>
+                </li>
+                <li>Dane audio mogą być tymczasowo przechowywane podczas przetwarzania</li>
+                <li>Przetworzony tekst może być zapisywany zgodnie z funkcjonalnością aplikacji</li>
+                <li>Możesz w każdej chwili wyłączyć tę funkcję w ustawieniach aplikacji</li>
+                <li>Po wyłączeniu funkcji, przetworzone dane audio są usuwane</li>
+            </ul>
+            
+            <h2>5. Firebase Analytics</h2>
             <ul>
                 <li>Zbieramy anonimowe dane statystyczne o użyciu aplikacji</li>
                 <li>Dane nie zawierają informacji umożliwiających identyfikację użytkownika</li>
@@ -205,44 +254,73 @@
                 <li>Możesz wyłączyć zbieranie danych analitycznych w ustawieniach aplikacji</li>
             </ul>
             
-            <h2>5. Cel przetwarzania</h2>
+            <h2>6. Cel przetwarzania</h2>
             <ul>
                 <li>Rozpoznawanie nut na podstawie częstotliwości dźwięku</li>
+                <li><strong>Konwersja mowy na tekst (tylko jeśli funkcja STT włączona)</strong></li>
                 <li>Analiza użycia aplikacji w celu jej ulepszania</li>
                 <li>Personalizacja doświadczenia użytkownika</li>
                 <li>Poprawa działania i stabilności aplikacji</li>
             </ul>
             
-            <h2>6. Podstawa prawna</h2>
+            <h2>7. Podstawa prawna</h2>
             <ul>
-                <li>Zgoda użytkownika (art. 6 ust. 1 lit. a RODO)</li>
-                <li>Wykonanie umowy (art. 6 ust. 1 lit. b RODO)</li>
-                <li>Prawnie uzasadniony interes administratora (art. 6 ust. 1 lit. f RODO)</li>
+                <li>Zgoda użytkownika (art. 6 ust. 1 lit. a RODO) - dla funkcji STT</li>
+                <li>Wykonanie umowy (art. 6 ust. 1 lit. b RODO) - dla podstawowej funkcjonalności</li>
+                <li>Prawnie uzasadniony interes administratora (art. 6 ust. 1 lit. f RODO) - dla analityki</li>
             </ul>
             
-            <h2>7. Przechowywanie i bezpieczeństwo</h2>
+            <h2>8. Przechowywanie i bezpieczeństwo</h2>
             <ul>
-                <li>Analiza dźwięku odbywa się lokalnie na urządzeniu</li>
-                <li>Dane częstotliwości nie są zapisywane po zakończeniu analizy</li>
-                <li>Dane Firebase Analytics przechowywane są przez 14 miesięcy</li>
-                <li>Wszystkie dane są anonimizowane i szyfrowane</li>
+                <li><strong>Analiza częstotliwości dźwięku:</strong>
+                    <ul>
+                        <li>Odbywa się lokalnie na urządzeniu użytkownika</li>
+                        <li>Dane częstotliwości nie są zapisywane po zakończeniu analizy</li>
+                        <li>Żadne nagrania audio nie są tworzone</li>
+                    </ul>
+                </li>
+                <li><strong>Dane Speech-to-Text:</strong>
+                    <ul>
+                        <li>Nagrania audio są usuwane natychmiast po przetworzeniu</li>
+                        <li>Przetworzony tekst może być przechowywany zgodnie z funkcjonalnością aplikacji</li>
+                        <li>Dane nie są wykorzystywane do trenowania modeli AI bez wyraźnej zgody</li>
+                        <li>Wszystkie przesyłane dane są szyfrowane</li>
+                    </ul>
+                </li>
+                <li><strong>Firebase Analytics:</strong>
+                    <ul>
+                        <li>Dane przechowywane są przez 14 miesięcy</li>
+                        <li>Wszystkie dane są anonimizowane</li>
+                    </ul>
+                </li>
             </ul>
             
-            <h2>8. Usługi zewnętrzne</h2>
-            <p><strong>Firebase Analytics (Google)</strong> - do zbierania anonimowych danych analitycznych.<br>
-            Dane przesyłane zgodnie z polityką prywatności Google.</p>
+            <h2>9. Usługi zewnętrzne</h2>
+            <ul>
+                <li><strong>Firebase Analytics (Google)</strong> - do zbierania anonimowych danych analitycznych</li>
+                <li><strong>Usługi rozpoznawania mowy (tylko jeśli STT włączone):</strong>
+                    <ul>
+                        <li>Google Speech-to-Text API (na Android)</li>
+                        <li>Apple Speech Framework (na iOS)</li>
+                        <li>Inne usługi przetwarzania mowy w zależności od platformy</li>
+                    </ul>
+                    Dane audio przekazywane zgodnie z polityką prywatności odpowiedniego dostawcy usługi.
+                </li>
+            </ul>
             
-            <h2>9. Prawa użytkowników</h2>
+            <h2>10. Prawa użytkowników</h2>
             <ul>
                 <li>Prawo do dostępu do swoich danych</li>
                 <li>Prawo do usunięcia danych</li>
-                <li>Prawo do wycofania zgody na przetwarzanie</li>
+                <li>Prawo do wycofania zgody na przetwarzanie (dla funkcji STT)</li>
                 <li>Prawo do przenoszenia danych</li>
+                <li>Prawo do ograniczenia przetwarzania</li>
                 <li>Aby usunąć wszystkie dane, usuń dane aplikacji w ustawieniach urządzenia</li>
+                <li>Do zarządzania danymi STT skorzystaj z ustawień aplikacji</li>
             </ul>
             
             <div class="contact-info">
-                <h2>10. Kontakt</h2>
+                <h2>11. Kontakt</h2>
                 <p>W sprawach prywatności oraz pytań dotyczących danych:<br>
                 <a href="mailto:marmotdash@gmail.com">marmotdash@gmail.com</a></p>
                 <p>Odpowiadamy na zapytania w ciągu 30 dni.</p>
@@ -254,7 +332,18 @@
             <p><strong>Effective Date:</strong> January 3, 2026</p>
             
             <div class="highlight">
-                <strong>Important Notice:</strong> The Marmot Dash app uses the microphone EXCLUSIVELY for real-time sound frequency analysis to recognize musical notes. <strong>WE DO NOT RECORD</strong> and <strong>WE DO NOT SAVE</strong> any audio recordings.
+                <strong>Important Notice:</strong> The Marmot Dash app offers two microphone-using features:
+                <ul>
+                    <li><strong>Sound frequency analysis</strong> - EXCLUSIVELY for real-time note recognition without saving recordings</li>
+                    <li><strong>Speech-to-text - OPTIONAL</strong> - function for converting speech to text (only if explicitly enabled by the user)</li>
+                </ul>
+            </div>
+            
+            <div class="warning">
+                <strong>Speech-to-Text Notice:</strong>
+                <p>The speech-to-text function is <strong>optional</strong> and requires your active consent. 
+                When using this feature, your speech may be processed by external services. 
+                You can disable this feature at any time in the app settings.</p>
             </div>
             
             <h2>1. Data Controller</h2>
@@ -264,6 +353,8 @@
             <h2>2. Data We Collect</h2>
             <ul>
                 <li><strong>Sound frequency analysis data</strong> - processed in real-time without saving</li>
+                <li><strong>Speech data (only if STT enabled)</strong> - audio recordings for text conversion</li>
+                <li><strong>Processed text (only if STT enabled)</strong> - result of speech-to-text conversion</li>
                 <li><strong>Firebase Analytics data</strong> - anonymous app usage statistics</li>
                 <li><strong>Preference information</strong> - app settings</li>
                 <li><strong>Technical data</strong> - device information, error logs</li>
@@ -271,14 +362,42 @@
             
             <h2>3. Microphone Usage</h2>
             <ul>
-                <li>Microphone is used exclusively for sound frequency analysis</li>
-                <li>Processing occurs in real-time on the user's device</li>
-                <li><strong>No audio recordings are created or saved</strong></li>
-                <li>Processed data (frequencies) does not contain voice content</li>
-                <li>Microphone access can be disabled at any time in app settings</li>
+                <li>Microphone can be used for two purposes:</li>
+                <ul>
+                    <li><strong>Sound frequency analysis</strong> - for recognizing musical notes
+                        <ul>
+                            <li>Processing occurs in real-time on the device</li>
+                            <li><strong>No audio recordings are created or saved</strong></li>
+                            <li>Microphone access can be disabled at any time in app settings</li>
+                        </ul>
+                    </li>
+                    <li><strong>Speech-to-text</strong> - optional function
+                        <ul>
+                            <li>Requires explicit, separate user consent before activation</li>
+                            <li>Speech recordings are processed for text conversion</li>
+                            <li>Function is OFF by default</li>
+                        </ul>
+                    </li>
+                </ul>
             </ul>
             
-            <h2>4. Firebase Analytics</h2>
+            <h2>4. Speech-to-Text (Optional Function)</h2>
+            <ul>
+                <li>Function available only after explicit, informed user consent</li>
+                <li>Speech recordings are processed for conversion to written text</li>
+                <li><strong>Processing may occur:</strong>
+                    <ul>
+                        <li>Locally on the device (if supported by the system)</li>
+                        <li>Through external speech recognition services (see section 8)</li>
+                    </ul>
+                </li>
+                <li>Audio data may be temporarily stored during processing</li>
+                <li>Processed text may be saved according to app functionality</li>
+                <li>You can disable this function at any time in app settings</li>
+                <li>When disabled, processed audio data is deleted</li>
+            </ul>
+            
+            <h2>5. Firebase Analytics</h2>
             <ul>
                 <li>We collect anonymous statistical data about app usage</li>
                 <li>Data does not contain personally identifiable information</li>
@@ -287,44 +406,73 @@
                 <li>You can disable analytics data collection in app settings</li>
             </ul>
             
-            <h2>5. Purpose of Processing</h2>
+            <h2>6. Purpose of Processing</h2>
             <ul>
                 <li>Recognizing musical notes based on sound frequency</li>
+                <li><strong>Converting speech to text (only if STT function enabled)</strong></li>
                 <li>Analyzing app usage for improvement purposes</li>
                 <li>Personalizing user experience</li>
                 <li>Improving app performance and stability</li>
             </ul>
             
-            <h2>6. Legal Basis</h2>
+            <h2>7. Legal Basis</h2>
             <ul>
-                <li>User consent (Article 6(1)(a) GDPR)</li>
-                <li>Performance of contract (Article 6(1)(b) GDPR)</li>
-                <li>Legitimate interests of the controller (Article 6(1)(f) GDPR)</li>
+                <li>User consent (Article 6(1)(a) GDPR) - for STT function</li>
+                <li>Performance of contract (Article 6(1)(b) GDPR) - for core functionality</li>
+                <li>Legitimate interests of the controller (Article 6(1)(f) GDPR) - for analytics</li>
             </ul>
             
-            <h2>7. Storage and Security</h2>
+            <h2>8. Storage and Security</h2>
             <ul>
-                <li>Sound analysis occurs locally on the device</li>
-                <li>Frequency data is not saved after analysis is complete</li>
-                <li>Firebase Analytics data is stored for 14 months</li>
-                <li>All data is anonymized and encrypted</li>
+                <li><strong>Sound frequency analysis:</strong>
+                    <ul>
+                        <li>Occurs locally on the user's device</li>
+                        <li>Frequency data is not saved after analysis is complete</li>
+                        <li>No audio recordings are created</li>
+                    </ul>
+                </li>
+                <li><strong>Speech-to-Text data:</strong>
+                    <ul>
+                        <li>Audio recordings are deleted immediately after processing</li>
+                        <li>Processed text may be stored according to app functionality</li>
+                        <li>Data is not used to train AI models without explicit consent</li>
+                        <li>All transmitted data is encrypted</li>
+                    </ul>
+                </li>
+                <li><strong>Firebase Analytics:</strong>
+                    <ul>
+                        <li>Data is stored for 14 months</li>
+                        <li>All data is anonymized</li>
+                    </ul>
+                </li>
             </ul>
             
-            <h2>8. External Services</h2>
-            <p><strong>Firebase Analytics (Google)</strong> - for collecting anonymous analytics data.<br>
-            Data transferred according to Google's privacy policy.</p>
+            <h2>9. External Services</h2>
+            <ul>
+                <li><strong>Firebase Analytics (Google)</strong> - for collecting anonymous analytics data</li>
+                <li><strong>Speech recognition services (only if STT enabled):</strong>
+                    <ul>
+                        <li>Google Speech-to-Text API (on Android)</li>
+                        <li>Apple Speech Framework (on iOS)</li>
+                        <li>Other speech processing services depending on platform</li>
+                    </ul>
+                    Audio data transferred according to the respective service provider's privacy policy.
+                </li>
+            </ul>
             
-            <h2>9. User Rights</h2>
+            <h2>10. User Rights</h2>
             <ul>
                 <li>Right to access your data</li>
                 <li>Right to data deletion</li>
-                <li>Right to withdraw consent</li>
+                <li>Right to withdraw consent (for STT function)</li>
                 <li>Right to data portability</li>
+                <li>Right to restrict processing</li>
                 <li>To delete all data, remove app data in your device settings</li>
+                <li>To manage STT data, use the app settings</li>
             </ul>
             
             <div class="contact-info">
-                <h2>10. Contact</h2>
+                <h2>11. Contact</h2>
                 <p>For privacy matters and data inquiries:<br>
                 <a href="mailto:marmotdash@gmail.com">marmotdash@gmail.com</a></p>
                 <p>We respond to inquiries within 30 days.</p>
