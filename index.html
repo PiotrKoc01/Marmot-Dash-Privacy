@@ -100,6 +100,14 @@
             margin-bottom: 0.5rem;
         }
         
+        .highlight {
+            background-color: #fff9e6;
+            padding: 1rem;
+            border-left: 4px solid #ffcc00;
+            margin: 1rem 0;
+            border-radius: 4px;
+        }
+        
         .contact-info {
             background: #f8f9fa;
             padding: 1.5rem;
@@ -163,48 +171,81 @@
             <h2>Polityka Prywatności Marmot Dash</h2>
             <p><strong>Data wejścia w życie:</strong> 03.01.2026</p>
             
+            <div class="highlight">
+                <strong>Ważna informacja:</strong> Aplikacja Marmot Dash używa mikrofonu WYŁĄCZNIE do analizy częstotliwości dźwięku w czasie rzeczywistym w celu rozpoznawania nut. <strong>NIE NAGRAMY</strong> i <strong>NIE ZAPISUJEMY</strong> żadnych nagrań dźwiękowych.
+            </div>
+            
             <h2>1. Administrator danych</h2>
             <p>Piotr Koczur<br>
             marmotdash@gmail.com</p>
             
             <h2>2. Jakie dane zbieramy</h2>
             <ul>
-                <li><strong>Dane głosowe</strong> - wyłącznie w czasie rzeczywistym dla funkcji mowy</li>
-                <li><strong>Informacje o preferencjach</strong> - wiek, tematy nauki</li>
+                <li><strong>Dane analizy częstotliwości dźwięku</strong> - przetwarzane w czasie rzeczywistym bez zapisywania</li>
+                <li><strong>Dane analityczne Firebase</strong> - anonimowe statystyki użycia aplikacji</li>
+                <li><strong>Informacje o preferencjach</strong> - ustawienia aplikacji</li>
                 <li><strong>Dane techniczne</strong> - informacje o urządzeniu, logi błędów</li>
             </ul>
             
-            <h2>3. Cel przetwarzania</h2>
+            <h2>3. Użycie mikrofonu</h2>
             <ul>
-                <li>Umożliwienie funkcji Text-to-Speech i Speech-to-Text</li>
-                <li>Personalizacja doświadczenia użytkownika</li>
-                <li>Poprawa działania aplikacji</li>
+                <li>Mikrofon używany jest wyłącznie do analizy częstotliwości dźwięku</li>
+                <li>Przetwarzanie odbywa się w czasie rzeczywistym na urządzeniu użytkownika</li>
+                <li><strong>Żadne nagrania dźwiękowe nie są tworzone ani zapisywane</strong></li>
+                <li>Przetworzone dane (częstotliwości) nie zawierają treści głosowych</li>
+                <li>Dostęp do mikrofonu można w każdej chwili wyłączyć w ustawieniach aplikacji</li>
             </ul>
             
-            <h2>4. Podstawa prawna</h2>
+            <h2>4. Firebase Analytics</h2>
+            <ul>
+                <li>Zbieramy anonimowe dane statystyczne o użyciu aplikacji</li>
+                <li>Dane nie zawierają informacji umożliwiających identyfikację użytkownika</li>
+                <li>Śledzimy zdarzenia takie jak: uruchomienia aplikacji, użycie funkcji, błędy</li>
+                <li>Dane służą wyłącznie do poprawy jakości aplikacji</li>
+                <li>Możesz wyłączyć zbieranie danych analitycznych w ustawieniach aplikacji</li>
+            </ul>
+            
+            <h2>5. Cel przetwarzania</h2>
+            <ul>
+                <li>Rozpoznawanie nut na podstawie częstotliwości dźwięku</li>
+                <li>Analiza użycia aplikacji w celu jej ulepszania</li>
+                <li>Personalizacja doświadczenia użytkownika</li>
+                <li>Poprawa działania i stabilności aplikacji</li>
+            </ul>
+            
+            <h2>6. Podstawa prawna</h2>
             <ul>
                 <li>Zgoda użytkownika (art. 6 ust. 1 lit. a RODO)</li>
                 <li>Wykonanie umowy (art. 6 ust. 1 lit. b RODO)</li>
+                <li>Prawnie uzasadniony interes administratora (art. 6 ust. 1 lit. f RODO)</li>
             </ul>
             
-            <h2>5. Przechowywanie i bezpieczeństwo</h2>
+            <h2>7. Przechowywanie i bezpieczeństwo</h2>
             <ul>
-                <li>Dane przechowywane lokalnie na urządzeniu</li>
-                <li>Brak przechowywania na naszych serwerach</li>
-                <li>Dane głosowe nie są zapisywane po zakończeniu sesji</li>
+                <li>Analiza dźwięku odbywa się lokalnie na urządzeniu</li>
+                <li>Dane częstotliwości nie są zapisywane po zakończeniu analizy</li>
+                <li>Dane Firebase Analytics przechowywane są przez 14 miesięcy</li>
+                <li>Wszystkie dane są anonimizowane i szyfrowane</li>
             </ul>
             
-            <h2>6. Usługi zewnętrzne</h2>
-            <p>Korzystamy z Google Cloud APIs do przetwarzania mowy.<br>
-            Dane audio są przekazywane tym usługom zgodnie z ich politykami.</p>
+            <h2>8. Usługi zewnętrzne</h2>
+            <p><strong>Firebase Analytics (Google)</strong> - do zbierania anonimowych danych analitycznych.<br>
+            Dane przesyłane zgodnie z polityką prywatności Google.</p>
             
-            <h2>7. Prawa użytkowników</h2>
-            <p>Masz prawo do dostępu, poprawy, usunięcia swoich danych.<br>
-            Aby usunąć wszystkie dane, usuń dane aplikacji w ustawieniach urządzenia.</p>
+            <h2>9. Prawa użytkowników</h2>
+            <ul>
+                <li>Prawo do dostępu do swoich danych</li>
+                <li>Prawo do usunięcia danych</li>
+                <li>Prawo do wycofania zgody na przetwarzanie</li>
+                <li>Prawo do przenoszenia danych</li>
+                <li>Aby usunąć wszystkie dane, usuń dane aplikacji w ustawieniach urządzenia</li>
+            </ul>
             
             <div class="contact-info">
-                <h2>8. Kontakt</h2>
-                <p>W sprawach prywatności: <a href="mailto:marmotdash@gmail.com">marmotdash@gmail.com</a></p>
+                <h2>10. Kontakt</h2>
+                <p>W sprawach prywatności oraz pytań dotyczących danych:<br>
+                <a href="mailto:marmotdash@gmail.com">marmotdash@gmail.com</a></p>
+                <p>Odpowiadamy na zapytania w ciągu 30 dni.</p>
             </div>
         </div>
         
@@ -212,48 +253,81 @@
             <h2>Marmot Dash Privacy Policy</h2>
             <p><strong>Effective Date:</strong> January 3, 2026</p>
             
+            <div class="highlight">
+                <strong>Important Notice:</strong> The Marmot Dash app uses the microphone EXCLUSIVELY for real-time sound frequency analysis to recognize musical notes. <strong>WE DO NOT RECORD</strong> and <strong>WE DO NOT SAVE</strong> any audio recordings.
+            </div>
+            
             <h2>1. Data Controller</h2>
             <p>Piotr Koczur<br>
             marmotdash@gmail.com</p>
             
             <h2>2. Data We Collect</h2>
             <ul>
-                <li><strong>Voice data</strong> - only in real-time for speech functions</li>
-                <li><strong>Preference information</strong> - age, learning topics</li>
+                <li><strong>Sound frequency analysis data</strong> - processed in real-time without saving</li>
+                <li><strong>Firebase Analytics data</strong> - anonymous app usage statistics</li>
+                <li><strong>Preference information</strong> - app settings</li>
                 <li><strong>Technical data</strong> - device information, error logs</li>
             </ul>
             
-            <h2>3. Purpose of Processing</h2>
+            <h2>3. Microphone Usage</h2>
             <ul>
-                <li>Enabling Text-to-Speech and Speech-to-Text functions</li>
-                <li>Personalizing user experience</li>
-                <li>Improving app performance</li>
+                <li>Microphone is used exclusively for sound frequency analysis</li>
+                <li>Processing occurs in real-time on the user's device</li>
+                <li><strong>No audio recordings are created or saved</strong></li>
+                <li>Processed data (frequencies) does not contain voice content</li>
+                <li>Microphone access can be disabled at any time in app settings</li>
             </ul>
             
-            <h2>4. Legal Basis</h2>
+            <h2>4. Firebase Analytics</h2>
+            <ul>
+                <li>We collect anonymous statistical data about app usage</li>
+                <li>Data does not contain personally identifiable information</li>
+                <li>We track events such as: app launches, feature usage, errors</li>
+                <li>Data is used solely to improve app quality</li>
+                <li>You can disable analytics data collection in app settings</li>
+            </ul>
+            
+            <h2>5. Purpose of Processing</h2>
+            <ul>
+                <li>Recognizing musical notes based on sound frequency</li>
+                <li>Analyzing app usage for improvement purposes</li>
+                <li>Personalizing user experience</li>
+                <li>Improving app performance and stability</li>
+            </ul>
+            
+            <h2>6. Legal Basis</h2>
             <ul>
                 <li>User consent (Article 6(1)(a) GDPR)</li>
                 <li>Performance of contract (Article 6(1)(b) GDPR)</li>
+                <li>Legitimate interests of the controller (Article 6(1)(f) GDPR)</li>
             </ul>
             
-            <h2>5. Storage and Security</h2>
+            <h2>7. Storage and Security</h2>
             <ul>
-                <li>Data stored locally on device</li>
-                <li>No storage on our servers</li>
-                <li>Voice data is not saved after session ends</li>
+                <li>Sound analysis occurs locally on the device</li>
+                <li>Frequency data is not saved after analysis is complete</li>
+                <li>Firebase Analytics data is stored for 14 months</li>
+                <li>All data is anonymized and encrypted</li>
             </ul>
             
-            <h2>6. External Services</h2>
-            <p>We use Google Cloud APIs for speech processing.<br>
-            Audio data is transferred to these services according to their policies.</p>
+            <h2>8. External Services</h2>
+            <p><strong>Firebase Analytics (Google)</strong> - for collecting anonymous analytics data.<br>
+            Data transferred according to Google's privacy policy.</p>
             
-            <h2>7. User Rights</h2>
-            <p>You have the right to access, correct, and delete your data.<br>
-            To delete all data, remove app data in your device settings.</p>
+            <h2>9. User Rights</h2>
+            <ul>
+                <li>Right to access your data</li>
+                <li>Right to data deletion</li>
+                <li>Right to withdraw consent</li>
+                <li>Right to data portability</li>
+                <li>To delete all data, remove app data in your device settings</li>
+            </ul>
             
             <div class="contact-info">
-                <h2>8. Contact</h2>
-                <p>For privacy matters: <a href="mailto:marmotdash@gmail.com">marmotdash@gmail.com</a></p>
+                <h2>10. Contact</h2>
+                <p>For privacy matters and data inquiries:<br>
+                <a href="mailto:marmotdash@gmail.com">marmotdash@gmail.com</a></p>
+                <p>We respond to inquiries within 30 days.</p>
             </div>
         </div>
     </div>
