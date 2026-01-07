@@ -116,6 +116,14 @@
             border-radius: 4px;
         }
         
+        .info {
+            background-color: #e6f3ff;
+            padding: 1rem;
+            border-left: 4px solid #3399ff;
+            margin: 1rem 0;
+            border-radius: 4px;
+        }
+        
         .contact-info {
             background: #f8f9fa;
             padding: 1.5rem;
@@ -194,6 +202,12 @@
                 Możesz w każdej chwili wyłączyć tę funkcję w ustawieniach aplikacji.</p>
             </div>
             
+            <div class="info">
+                <strong>Informacja o reklamach:</strong>
+                <p>Aplikacja Marmot Dash wyświetla reklamy w celu zapewnienia darmowej funkcjonalności. 
+                Reklamy mogą wykorzystywać dane do personalizacji treści. Więcej informacji w punktach 5 i 9.</p>
+            </div>
+            
             <h2>1. Administrator danych</h2>
             <p>Piotr Koczur<br>
             marmotdash@gmail.com</p>
@@ -204,8 +218,9 @@
                 <li><strong>Dane mowy (tylko jeśli STT włączone)</strong> - nagrania audio do konwersji na tekst</li>
                 <li><strong>Przetworzony tekst (tylko jeśli STT włączone)</strong> - wynik konwersji mowy na tekst</li>
                 <li><strong>Dane analityczne Firebase</strong> - anonimowe statystyki użycia aplikacji</li>
+                <li><strong>Dane reklamowe</strong> - identyfikatory reklam, interakcje z reklamami</li>
                 <li><strong>Informacje o preferencjach</strong> - ustawienia aplikacji</li>
-                <li><strong>Dane techniczne</strong> - informacje o urządzeniu, logi błędów</li>
+                <li><strong>Dane techniczne</strong> - informacje o urządzeniu, systemie operacyjnym, logi błędów</li>
             </ul>
             
             <h2>3. Użycie mikrofonu</h2>
@@ -236,7 +251,7 @@
                 <li><strong>Przetwarzanie może odbywać się:</strong>
                     <ul>
                         <li>Lokalnie na urządzeniu (jeśli obsługiwane przez system)</li>
-                        <li>Poprzez zewnętrzne usługi rozpoznawania mowy (patrz punkt 8)</li>
+                        <li>Poprzez zewnętrzne usługi rozpoznawania mowy (patrz punkt 10)</li>
                     </ul>
                 </li>
                 <li>Dane audio mogą być tymczasowo przechowywane podczas przetwarzania</li>
@@ -245,7 +260,25 @@
                 <li>Po wyłączeniu funkcji, przetworzone dane audio są usuwane</li>
             </ul>
             
-            <h2>5. Firebase Analytics</h2>
+            <h2>5. Reklamy</h2>
+            <ul>
+                <li>Aplikacja wyświetla reklamy w celu zapewnienia darmowej funkcjonalności</li>
+                <li><strong>Dane zbierane przez sieci reklamowe mogą obejmować:</strong>
+                    <ul>
+                        <li>Identyfikator reklamowy urządzenia (AAID/IDFA)</li>
+                        <li>Informacje o urządzeniu (model, system operacyjny)</li>
+                        <li>Lokalizacja (przybliżona, na podstawie IP)</li>
+                        <li>Interakcje z reklamami (kliknięcia, wyświetlenia)</li>
+                        <li>Dane dotyczące zainteresowań (jeśli dostępne)</li>
+                    </ul>
+                </li>
+                <li>Dane reklamowe są przetwarzane przez zewnętrzne sieci reklamowe</li>
+                <li>Możesz zresetować identyfikator reklamowy w ustawieniach swojego urządzenia</li>
+                <li>Personalizacja reklam może być ograniczona w ustawieniach aplikacji</li>
+                <li>Reklamy kierują do zewnętrznych stron - ich polityka prywatności obowiązuje po opuszczeniu aplikacji</li>
+            </ul>
+            
+            <h2>6. Firebase Analytics</h2>
             <ul>
                 <li>Zbieramy anonimowe dane statystyczne o użyciu aplikacji</li>
                 <li>Dane nie zawierają informacji umożliwiających identyfikację użytkownika</li>
@@ -254,23 +287,24 @@
                 <li>Możesz wyłączyć zbieranie danych analitycznych w ustawieniach aplikacji</li>
             </ul>
             
-            <h2>6. Cel przetwarzania</h2>
+            <h2>7. Cel przetwarzania</h2>
             <ul>
                 <li>Rozpoznawanie nut na podstawie częstotliwości dźwięku</li>
                 <li><strong>Konwersja mowy na tekst (tylko jeśli funkcja STT włączona)</strong></li>
+                <li>Wyświetlanie reklam w celu finansowania rozwoju aplikacji</li>
                 <li>Analiza użycia aplikacji w celu jej ulepszania</li>
                 <li>Personalizacja doświadczenia użytkownika</li>
                 <li>Poprawa działania i stabilności aplikacji</li>
             </ul>
             
-            <h2>7. Podstawa prawna</h2>
+            <h2>8. Podstawa prawna</h2>
             <ul>
-                <li>Zgoda użytkownika (art. 6 ust. 1 lit. a RODO) - dla funkcji STT</li>
+                <li>Zgoda użytkownika (art. 6 ust. 1 lit. a RODO) - dla funkcji STT i reklam personalizowanych</li>
                 <li>Wykonanie umowy (art. 6 ust. 1 lit. b RODO) - dla podstawowej funkcjonalności</li>
-                <li>Prawnie uzasadniony interes administratora (art. 6 ust. 1 lit. f RODO) - dla analityki</li>
+                <li>Prawnie uzasadniony interes administratora (art. 6 ust. 1 lit. f RODO) - dla analityki i reklam niepersonalizowanych</li>
             </ul>
             
-            <h2>8. Przechowywanie i bezpieczeństwo</h2>
+            <h2>9. Przechowywanie i bezpieczeństwo</h2>
             <ul>
                 <li><strong>Analiza częstotliwości dźwięku:</strong>
                     <ul>
@@ -284,7 +318,13 @@
                         <li>Nagrania audio są usuwane natychmiast po przetworzeniu</li>
                         <li>Przetworzony tekst może być przechowywany zgodnie z funkcjonalnością aplikacji</li>
                         <li>Dane nie są wykorzystywane do trenowania modeli AI bez wyraźnej zgody</li>
-                        <li>Wszystkie przesyłane dane są szyfrowane</li>
+                    </ul>
+                </li>
+                <li><strong>Dane reklamowe:</strong>
+                    <ul>
+                        <li>Przechowywane przez sieci reklamowe zgodnie z ich politykami</li>
+                        <li>Typowy okres przechowywania: 13-24 miesięcy</li>
+                        <li>Możesz zarządzać preferencjami reklamowymi w ustawieniach urządzenia</li>
                     </ul>
                 </li>
                 <li><strong>Firebase Analytics:</strong>
@@ -293,34 +333,47 @@
                         <li>Wszystkie dane są anonimizowane</li>
                     </ul>
                 </li>
+                <li>Wszystkie przesyłane dane są szyfrowane (HTTPS)</li>
             </ul>
             
-            <h2>9. Usługi zewnętrzne</h2>
+            <h2>10. Usługi zewnętrzne</h2>
             <ul>
                 <li><strong>Firebase Analytics (Google)</strong> - do zbierania anonimowych danych analitycznych</li>
+                <li><strong>Sieci reklamowe</strong> - do wyświetlania reklam (np. Google AdMob, Facebook Audience Network)</li>
                 <li><strong>Usługi rozpoznawania mowy (tylko jeśli STT włączone):</strong>
                     <ul>
                         <li>Capacitor Speech-to-Text API (na Android)</li>
                         <li>Apple Speech Framework (na iOS)</li>
                         <li>Inne usługi przetwarzania mowy w zależności od platformy</li>
                     </ul>
-                    Dane audio przekazywane zgodnie z polityką prywatności odpowiedniego dostawcy usługi.
                 </li>
+                <li>Dane przekazywane zgodnie z polityką prywatności odpowiedniego dostawcy usługi</li>
+                <li>Zachęcamy do zapoznania się z politykami prywatności tych usług</li>
             </ul>
             
-            <h2>10. Prawa użytkowników</h2>
+            <h2>11. Prawa użytkowników</h2>
             <ul>
                 <li>Prawo do dostępu do swoich danych</li>
                 <li>Prawo do usunięcia danych</li>
-                <li>Prawo do wycofania zgody na przetwarzanie (dla funkcji STT)</li>
+                <li>Prawo do wycofania zgody na przetwarzanie (dla funkcji STT i reklam personalizowanych)</li>
                 <li>Prawo do przenoszenia danych</li>
                 <li>Prawo do ograniczenia przetwarzania</li>
+                <li>Prawo do sprzeciwu wobec przetwarzania</li>
                 <li>Aby usunąć wszystkie dane, usuń dane aplikacji w ustawieniach urządzenia</li>
                 <li>Do zarządzania danymi STT skorzystaj z ustawień aplikacji</li>
+                <li>Do zarządzania preferencjami reklamowymi użyj ustawień systemowych urządzenia</li>
+            </ul>
+            
+            <h2>12. Zmiany w polityce prywatności</h2>
+            <ul>
+                <li>Polityka prywatności może być aktualizowana</li>
+                <li>O istotnych zmianach poinformujemy w aplikacji</li>
+                <li>Aktualna wersja zawsze dostępna w aplikacji i na stronie internetowej</li>
+                <li>Kontynuowanie korzystania z aplikacji po zmianach oznacza ich akceptację</li>
             </ul>
             
             <div class="contact-info">
-                <h2>11. Kontakt</h2>
+                <h2>13. Kontakt</h2>
                 <p>W sprawach prywatności oraz pytań dotyczących danych:<br>
                 <a href="mailto:marmotdash@gmail.com">marmotdash@gmail.com</a></p>
                 <p>Odpowiadamy na zapytania w ciągu 30 dni.</p>
@@ -346,6 +399,12 @@
                 You can disable this feature at any time in the app settings.</p>
             </div>
             
+            <div class="info">
+                <strong>Advertising Information:</strong>
+                <p>The Marmot Dash app displays advertisements to provide free functionality. 
+                Ads may use data to personalize content. More information in sections 5 and 9.</p>
+            </div>
+            
             <h2>1. Data Controller</h2>
             <p>Piotr Koczur<br>
             marmotdash@gmail.com</p>
@@ -356,8 +415,9 @@
                 <li><strong>Speech data (only if STT enabled)</strong> - audio recordings for text conversion</li>
                 <li><strong>Processed text (only if STT enabled)</strong> - result of speech-to-text conversion</li>
                 <li><strong>Firebase Analytics data</strong> - anonymous app usage statistics</li>
+                <li><strong>Advertising data</strong> - ad identifiers, ad interactions</li>
                 <li><strong>Preference information</strong> - app settings</li>
-                <li><strong>Technical data</strong> - device information, error logs</li>
+                <li><strong>Technical data</strong> - device information, operating system, error logs</li>
             </ul>
             
             <h2>3. Microphone Usage</h2>
@@ -388,7 +448,7 @@
                 <li><strong>Processing may occur:</strong>
                     <ul>
                         <li>Locally on the device (if supported by the system)</li>
-                        <li>Through external speech recognition services (see section 8)</li>
+                        <li>Through external speech recognition services (see section 10)</li>
                     </ul>
                 </li>
                 <li>Audio data may be temporarily stored during processing</li>
@@ -397,7 +457,25 @@
                 <li>When disabled, processed audio data is deleted</li>
             </ul>
             
-            <h2>5. Firebase Analytics</h2>
+            <h2>5. Advertising</h2>
+            <ul>
+                <li>The app displays advertisements to provide free functionality</li>
+                <li><strong>Data collected by ad networks may include:</strong>
+                    <ul>
+                        <li>Device advertising identifier (AAID/IDFA)</li>
+                        <li>Device information (model, operating system)</li>
+                        <li>Location data (approximate, based on IP)</li>
+                        <li>Ad interactions (clicks, impressions)</li>
+                        <li>Interest data (if available)</li>
+                    </ul>
+                </li>
+                <li>Advertising data is processed by external ad networks</li>
+                <li>You can reset your advertising identifier in your device settings</li>
+                <li>Ad personalization can be limited in app settings</li>
+                <li>Ads lead to external websites - their privacy policy applies after leaving the app</li>
+            </ul>
+            
+            <h2>6. Firebase Analytics</h2>
             <ul>
                 <li>We collect anonymous statistical data about app usage</li>
                 <li>Data does not contain personally identifiable information</li>
@@ -406,23 +484,24 @@
                 <li>You can disable analytics data collection in app settings</li>
             </ul>
             
-            <h2>6. Purpose of Processing</h2>
+            <h2>7. Purpose of Processing</h2>
             <ul>
                 <li>Recognizing musical notes based on sound frequency</li>
                 <li><strong>Converting speech to text (only if STT function enabled)</strong></li>
+                <li>Displaying advertisements to fund app development</li>
                 <li>Analyzing app usage for improvement purposes</li>
                 <li>Personalizing user experience</li>
                 <li>Improving app performance and stability</li>
             </ul>
             
-            <h2>7. Legal Basis</h2>
+            <h2>8. Legal Basis</h2>
             <ul>
-                <li>User consent (Article 6(1)(a) GDPR) - for STT function</li>
+                <li>User consent (Article 6(1)(a) GDPR) - for STT function and personalized ads</li>
                 <li>Performance of contract (Article 6(1)(b) GDPR) - for core functionality</li>
-                <li>Legitimate interests of the controller (Article 6(1)(f) GDPR) - for analytics</li>
+                <li>Legitimate interests of the controller (Article 6(1)(f) GDPR) - for analytics and non-personalized ads</li>
             </ul>
             
-            <h2>8. Storage and Security</h2>
+            <h2>9. Storage and Security</h2>
             <ul>
                 <li><strong>Sound frequency analysis:</strong>
                     <ul>
@@ -436,7 +515,13 @@
                         <li>Audio recordings are deleted immediately after processing</li>
                         <li>Processed text may be stored according to app functionality</li>
                         <li>Data is not used to train AI models without explicit consent</li>
-                        <li>All transmitted data is encrypted</li>
+                    </ul>
+                </li>
+                <li><strong>Advertising data:</strong>
+                    <ul>
+                        <li>Stored by ad networks according to their policies</li>
+                        <li>Typical storage period: 13-24 months</li>
+                        <li>You can manage ad preferences in device settings</li>
                     </ul>
                 </li>
                 <li><strong>Firebase Analytics:</strong>
@@ -445,34 +530,47 @@
                         <li>All data is anonymized</li>
                     </ul>
                 </li>
+                <li>All transmitted data is encrypted (HTTPS)</li>
             </ul>
             
-            <h2>9. External Services</h2>
+            <h2>10. External Services</h2>
             <ul>
                 <li><strong>Firebase Analytics (Google)</strong> - for collecting anonymous analytics data</li>
+                <li><strong>Advertising networks</strong> - for displaying ads (e.g., Google AdMob, Facebook Audience Network)</li>
                 <li><strong>Speech recognition services (only if STT enabled):</strong>
                     <ul>
                         <li>Capacitor Speech-to-Text API (on Android)</li>
                         <li>Apple Speech Framework (on iOS)</li>
                         <li>Other speech processing services depending on platform</li>
                     </ul>
-                    Audio data transferred according to the respective service provider's privacy policy.
                 </li>
+                <li>Data transferred according to the respective service provider's privacy policy</li>
+                <li>We encourage you to review the privacy policies of these services</li>
             </ul>
             
-            <h2>10. User Rights</h2>
+            <h2>11. User Rights</h2>
             <ul>
                 <li>Right to access your data</li>
                 <li>Right to data deletion</li>
-                <li>Right to withdraw consent (for STT function)</li>
+                <li>Right to withdraw consent (for STT function and personalized ads)</li>
                 <li>Right to data portability</li>
                 <li>Right to restrict processing</li>
+                <li>Right to object to processing</li>
                 <li>To delete all data, remove app data in your device settings</li>
                 <li>To manage STT data, use the app settings</li>
+                <li>To manage ad preferences, use your device's system settings</li>
+            </ul>
+            
+            <h2>12. Changes to Privacy Policy</h2>
+            <ul>
+                <li>Privacy policy may be updated</li>
+                <li>We will notify about significant changes in the app</li>
+                <li>Current version always available in the app and on the website</li>
+                <li>Continued use of the app after changes means acceptance of them</li>
             </ul>
             
             <div class="contact-info">
-                <h2>11. Contact</h2>
+                <h2>13. Contact</h2>
                 <p>For privacy matters and data inquiries:<br>
                 <a href="mailto:marmotdash@gmail.com">marmotdash@gmail.com</a></p>
                 <p>We respond to inquiries within 30 days.</p>
